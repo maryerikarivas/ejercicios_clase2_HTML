@@ -1,0 +1,126 @@
+/* ===== ESTILOS TARJETA DE PRESENTACIÓN ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== BODY CON IMAGEN DE FONDO ===== */
+body {
+  position: relative;
+  background-image: url('img/background.png'); /* reemplaza con tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center; /* centrado horizontal */
+  align-items: center;     /* centrado vertical */
+  height: 100vh;
+  margin: 0;
+}
+
+/* ===== OVERLAY PARA DESTACAR TARJETA ===== */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ===== TARJETA ===== */
+.tarjeta {
+  width: 350px;
+  max-width: 90%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden;
+  padding: 60px 40px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== IMAGEN ===== */
+.tarjeta img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #80bfaf;
+  margin-bottom: 15px;
+}
+
+/* ===== TEXTOS ===== */
+.tarjeta h1 {
+  font-size: 1.5em;
+  color: #333;
+  font-weight: 700;
+}
+
+.tarjeta h2 {
+  font-size: 1em;
+  color: #074837;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.tarjeta p {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* ===== ÍCONOS DE REDES SOCIALES ===== */
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.redes-sociales a {
+  color: #fff;
+  background: linear-gradient(135deg, #074837, #80bfaf);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.redes-sociales a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(183, 104, 24, 0.6);
+}
+
+/* ===== BOTÓN CONTÁCTAME ===== */
+.contactame {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #074837, #80bfaf);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contactame:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(183, 104, 24, 0.6);
+}
